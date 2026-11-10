@@ -1,3 +1,4 @@
+
 * {
     margin: 0;
     padding: 0;
@@ -74,7 +75,6 @@ body {
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
 }
 
-
 .btn {
     border: none;
     padding: 10px 25px;
@@ -103,7 +103,6 @@ body {
     background-color: rgba(109, 109, 110, 0.4);
 }
 
-
 .movies-container {
     padding: 30px 4%;
     margin-top: -50px; 
@@ -123,7 +122,6 @@ body {
     padding: 10px 0;
 }
 
-
 .movies-row::-webkit-scrollbar {
     display: none;
 }
@@ -136,12 +134,14 @@ body {
         transform: scale(1.05); 
     }
 }
+
 .movie-card {
     cursor: pointer;
     border-radius: 4px;
     overflow: hidden;
     border: 2px solid transparent;
 }
+
 .movie-card:hover {
     animation: crescerCard 0.3s ease forwards;
 }
@@ -154,4 +154,96 @@ body {
 
 .movie-card:hover {
     overflow: hidden;
+}
+
+/* BOTÃO CRIAR FILME */
+
+.btn-create {
+    background-color: #3f0e75;
+    color: white;
+}
+
+.btn-create:hover {
+    background-color: #852df0;
+}
+
+/* JANELA DE CRIAÇÃO */
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.85);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal-content {
+    background-color: #181818;
+    padding: 30px;
+    border-radius: 8px;
+    width: 90%;
+    max-width: 450px;
+    position: relative;
+    box-shadow: 0 0 20px rgba(133, 45, 240, 0.4);
+}
+
+.modal-content h2 {
+    color: #852df0;
+    margin-bottom: 20px;
+}
+
+.close-modal {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+#movieForm {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+#movieForm label {
+    font-weight: bold;
+}
+
+#movieForm input,
+#movieForm textarea {
+    padding: 12px;
+    border: 1px solid #555;
+    border-radius: 4px;
+    background-color: #292929;
+    color: white;
+    outline: none;
+}
+
+#movieForm input:focus,
+#movieForm textarea:focus {
+    border-color: #852df0;
+}
+
+#movieForm textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.btn-save {
+    background-color: #3f0e75;
+    color: white;
+    margin-top: 10px;
+}
+
+.btn-save:hover {
+    background-color: #852df0;
 }
