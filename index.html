@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
@@ -7,79 +8,159 @@
     <link rel="stylesheet" href="style.css">
     <script src="script.js" defer></script>
 </head>
+
 <body>
+
     <header class="navbar">
+
         <div class="logo">MENDIGOFLIX</div>
+
         <nav class="nav-links">
             <a href="#" class="active">Início</a>
             <a href="#">Séries</a>
-            <a href="#">Filmes</a>
+            <a href="#moviesRow">Filmes</a>
         </nav>
-        
-        <button class="btn btn-create" id="openModal">
-            + Criar filme
-        </button>
+
     </header>
 
     <main class="banner">
+
         <div class="banner-content">
-            <h1 class="banner-title">Barbie Vida de Sereia</h1>
+
+            <h1 class="banner-title">
+                Barbie Vida de Sereia
+            </h1>
+
             <p class="banner-description">
-                Nesta nova aventura, Barbie é Merliah, uma campeã de surf de Malibu. Em um momento ela é uma adolescente e no outro aprende um chocante segredo de família: ela é uma sereia!
+                Nesta nova aventura, Barbie é Merliah, uma campeã de
+                surf de Malibu. Em um momento ela é uma adolescente
+                e no outro aprende um chocante segredo de família:
+                ela é uma sereia!
             </p>
+
             <div class="banner-buttons">
-                <button class="btn btn-play">► Assistir</button>
-                <button class="btn btn-info">Mais informações</button>
+
+                <button class="btn btn-play">
+                    ► Assistir
+                </button>
+
+                <button class="btn btn-info">
+                    Mais informações
+                </button>
+
             </div>
+
         </div>
+
     </main>
 
     <section class="movies-container">
+
         <h2 class="row-title">Filmes</h2>
+
         <div class="movies-row" id="moviesRow">
+
             <div class="movie-card">
-                <img src="https://seuentretenimento.com/wp-content/uploads/2025/11/madagascar-filme-1-1024x576.webp" alt="Madagascar">
+                <img
+                    src="https://seuentretenimento.com/wp-content/uploads/2025/11/madagascar-filme-1-1024x576.webp"
+                    alt="Madagascar">
             </div>
+
             <div class="movie-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_SyQsZXNSb5I7JGxAUcKOPqDWAWVkQU3hLI905busiDMh6KUFVWP3nsy&s=10" alt="VIVA: A vida é uma festa">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQs_SyQsZXNSb5I7JGxAUcKOPqDWAWVkQU3hLI905busiDMh6KUFVWP3nsy&s=10"
+                    alt="VIVA: A vida é uma festa">
             </div>
+
             <div class="movie-card">
-                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HqZT5mjiss--aYXOLONSf1cPs5LpdgyYBOVmHoiwYaQ16uQ1nK8Qmqs&s=10" alt="Tá chovendo hamburguer 2">
+                <img
+                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR9HqZT5mjiss--aYXOLONSf1cPs5LpdgyYBOVmHoiwYaQ16uQ1nK8Qmqs&s=10"
+                    alt="Tá chovendo hamburguer 2">
             </div>
+
             <div class="movie-card">
-                <img src="https://i.redd.it/tnlu1ase71i91.jpg" alt="My Little Pony: Friendship is magic">
+                <img
+                    src="https://i.redd.it/tnlu1ase71i91.jpg"
+                    alt="My Little Pony">
             </div>
+
             <div class="movie-card">
-                <img src="https://i.ytimg.com/vi/O_EaVQJ8fRY/sddefault.jpg" alt="Carros 3">
+                <img
+                    src="https://i.ytimg.com/vi/O_EaVQJ8fRY/sddefault.jpg"
+                    alt="Carros 3">
             </div>
+
             <div class="movie-card">
-                <img src="https://www.animationmagazine.net/wordpress/wp-content/uploads/WinXftr.jpg" alt="Winx">
+                <img
+                    src="https://www.animationmagazine.net/wordpress/wp-content/uploads/WinXftr.jpg"
+                    alt="Winx">
             </div>
+
         </div>
+
     </section>
 
-    <!-- Janela para criar filmes -->
-    <div class="modal" id="movieModal">
-        <div class="modal-content">
-            <button class="close-modal" id="closeModal">&times;</button>
+    <!-- BOTÃO FLUTUANTE PARA CRIAR FILMES -->
 
-            <h2>Criar novo filme</h2>
+    <button class="btn-create" id="openModal">
+        + Criar filme
+    </button>
+
+    <!-- JANELA DE CRIAÇÃO DE FILMES -->
+
+    <div class="modal" id="movieModal">
+
+        <div class="modal-content">
+
+            <button class="close-modal" id="closeModal">
+                &times;
+            </button>
+
+            <h2>Adicionar novo filme</h2>
+
+            <p class="modal-description">
+                Preencha as informações para adicionar um filme.
+            </p>
 
             <form id="movieForm">
-                <label for="movieName">Nome do filme</label>
-                <input type="text" id="movieName" placeholder="Digite o nome do filme" required>
 
-                <label for="movieDescription">Resumo do filme</label>
-                <textarea id="movieDescription" placeholder="Digite o resumo do filme" required></textarea>
+                <label for="movieName">
+                    Nome do filme
+                </label>
 
-                <label for="movieLink">Link do filme</label>
-                <input type="url" id="movieLink" placeholder="https://exemplo.com/filme" required>
+                <input
+                    type="text"
+                    id="movieName"
+                    placeholder="Digite o nome do filme"
+                    required>
+
+                <label for="movieDescription">
+                    Prévia do filme
+                </label>
+
+                <textarea
+                    id="movieDescription"
+                    placeholder="Digite uma breve descrição"
+                    required></textarea>
+
+                <label for="movieLink">
+                    URL do filme
+                </label>
+
+                <input
+                    type="url"
+                    id="movieLink"
+                    placeholder="https://exemplo.com/filme"
+                    required>
 
                 <button type="submit" class="btn btn-save">
                     Salvar filme
                 </button>
+
             </form>
+
         </div>
+
     </div>
 
 </body>
